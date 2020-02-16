@@ -1,0 +1,29 @@
+
+.menu {
+  margin-top: 8px;
+  width: 100%;
+  display: flex;
+  padding: 8px;
+  flex-direction: row;
+  background-color: #fff;
+}
+
+.menu-item {
+  padding-top: 0rpx;
+  padding-left: 22rpx;
+  padding-right: 22rpx;
+  padding-bottom: 22rpx;
+  text-align: center;
+  background-color: #fff;
+}
+
+.menu-icon {
+  width: 180rpx;
+  height: 180rpx;
+}
+
+.menu-name {
+  width: 180rpx;
+  margin-top: 10rpx;
+  font-size: 39rpx;
+}

@@ -1,0 +1,30 @@
+<!--pages/menu/menu.wxml-->
+
+<image style="width: 100%;" mode="widthFix" src="../../image/main.png"></image>
+<view class="menu">
+<view class="menu-item" bindtap="onItemClick" id="underline">
+<image class="menu-icon" src="../../image/xuanjiang.png"></image>
+<view class="menu-name">线下宣讲</view>
+</view>
+<view class="menu-item" bindtap="onItemClick" id="online">
+<image class="menu-icon" src="../../image/zaixian.png"></image>
+<view class="menu-name">在线招聘</view>
+</view>
+  <!-- <block wx:for="{{mainMenu}}" wx:key="index">
+    <view wx:if="{{index < 5 && index >=0}}" class="menu-item" id="{{index}}" bindtap="onSelectMenu">
+      <block wx:if="{{online}}">
+        <image wx:if="{{item.status == 1}}" class="menu-icon" src="{{item.positiveImage}}"></image>
+        <image wx:else class="menu-icon" src="{{item.negativeImage}}"></image>
+      </block>
+      <block wx:else>
+        <image wx:if="{{item.id == 1}}" class="menu-icon" src="../../images/chengjichaxun_grey.png"></image>
+        <image wx:elif="{{item.id == 2}}" class="menu-icon" src="../../images/wodekebiao.png"></image>
+        <image wx:elif="{{item.id == 3}}" class="menu-icon" src="../../images/yangguangpingtai_grey.png"></image>
+        <image wx:elif="{{item.id == 4}}" class="menu-icon" src="../../images/shiwuzhaoling_grey.png"></image>
+        <image wx:elif="{{item.id == 5}}" class="menu-icon" src="../../images/jieyuexinxi_grey.png"></image>
+      </block>
+      <view class="menu-name">{{item.name}}</view>
+    </view>
+  </block> -->
+
+</view>

@@ -1,0 +1,4 @@
+var length = function(val) {
+  return val.length;
+}
+module.exports.length = length;

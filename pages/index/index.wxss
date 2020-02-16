@@ -1,0 +1,112 @@
+/* pages/index/index.wxss */
+
+.data-info{
+  background-color:#80FFFF; 
+  /* position: relative;
+  top: 49px; */
+}
+.weui-cell {
+  padding: 10px 0px 10px 10px; /* 上 右 下 左*/
+  background-color: #FCFCFC;
+  border-radius: 10px;
+  /* position: relative;
+  display: -webkit-box;
+  /* display: -webkit-flex; *//* display: flex; *//* -webkit-box-align: center;     
+  -webkit-align-items: center;
+          align-items: center;  */
+  margin: 1px 0px 1px 0px; /* 上 右 下 左*//* 内边距 *//* padding： */
+}
+
+.weui-row{
+  display: flex; 
+  justify-content: space-between; 
+}
+
+.weui-company {
+  font-size: 12px;
+  padding: 5px 5px 5px 5px;
+}
+
+.weui-school {
+  font-size: 10px;
+  padding: 5px 5px 5px 5px;
+}
+
+.weui-address {
+  font-size: 12px;
+  padding: 5px 5px 5px 5px;
+}
+
+.weui-startime {
+  font-size: 12px;
+  padding: 5px 5px 5px 5px;
+  margin: 0px 5px 0px 5px;
+}
+/* 导航样式 */
+.navigator{
+  /* position: fixed; */
+  top: 18rpx;
+  left: 0;
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.navigator>.navigator-name{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  font-size: 28rpx;
+  color: #666;
+  line-height: 100rpx;
+}
+
+.navigator>.navigator-name>.iconfont{
+  font-size: 12rpx;
+  margin-left: 8rpx;
+}
+
+.drop-down-background{
+  position: fixed;
+  /* top: 118rpx; */
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.drop-down-flex{
+  position: fixed;
+  /* top: 118rpx; */
+  left: 0;
+  width: 100%;
+  z-index: 222;
+  max-height: 100%;
+  overflow: hidden;
+  opacity: 0.95;
+}
+
+.drop-down{
+  width: 100%;
+  padding: 0 24rpx;
+  background: rgb(145, 165, 164);
+  height: 0rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: rgb(255, 254, 254);
+  transition: all 300ms;
+  overflow: hidden;
+}
+ 
+.down-active{
+  color: #F46458;
+}
+.down-show{
+  height: 88rpx;
+}

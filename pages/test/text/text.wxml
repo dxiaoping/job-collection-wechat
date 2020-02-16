@@ -1,0 +1,3 @@
+<!--pages/test/text/text.wxml-->
+<text selectable="{{true}}">pages/test/text/text.wxml</text>
+<view>userinfo:{{userinfo}}</view>

@@ -1,0 +1,23 @@
+/* pages/jobdetail/jobdetail.wxss */
+
+.wxui-title{
+  font-size: 18px;
+  color: rgb(85, 190, 238);
+  font-weight: 1000;
+}
+
+.wxui-content{
+  margin: 0px 5% 10px 8%; 
+}
+
+.weui-row{
+  display: flex; 
+  margin: 0px 5% 10px 8%; 
+  justify-content: space-between; 
+}
+
+.itemicon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 8px;
+}

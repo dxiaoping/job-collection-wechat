@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <!-- <text class="userinfo-nickname">{{userInfo.gender}}</text>
+      <text class="userinfo-nickname">{{userInfo.language}}</text>
+      <text class="userinfo-nickname">{{userInfo.city}}</text>
+      <text class="userinfo-nickname">{{userInfo.country}}</text>
+      <text class="userinfo-nickname">{{userInfo.province}}</text> -->
+    </block>
+  </view>
+</view>
+
+ <view class="memu-1">
+    <view class="listitem" bindtap="onItemClick" id="4">
+      <image class="itemicon" src="../../image/shou_cang.png"></image>
+      <view class="itemtext">收藏</view>
+      <image class="itemarrow" src="../../image/right.png"></image>
+    </view>
+    <!-- <view class="s-line"></view>
+    <view class="listitem" bindtap="onItemClick" id="5">
+      <image class="itemicon" src="../../images/guanyu.png"></image>
+      <view class="itemtext">关于</view>
+      <image class="itemarrow" src="../../images/right.png"></image>
+    </view> -->
+  </view>

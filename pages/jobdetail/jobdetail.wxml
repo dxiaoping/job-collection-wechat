@@ -1,0 +1,38 @@
+<!--pages/jobdetail/jobdetail.wxml-->
+<!-- <text>pages/jobdetail/jobdetail.wxml</text> -->
+
+<import src="../../wxParse/wxParse.wxml" />
+<wxs src="../../wxs/tool.wxs" module="tool" />
+<view>
+  <view class="wxui-content">
+    <text class="wxui-title">|宣讲信息|</text>
+    <template is="wxParse" data="{{wxParseData:talkInfos.nodes}}"></template>
+  </view>
+  <view class="weui-row">
+    <view>
+      <text>浏览次数：</text>
+      <text>555</text>
+    </view>
+    <view >
+    <text>收藏</text>
+      <image bindtap="changeShouCang" wx:if="{{isShouCang}}" class="itemicon"  id="cancel" src="../../image/shoucang_select.png" ></image>
+      <image bindtap="changeShouCang" wx:else class="itemicon"   id="select"src="../../image/shoucang_cancel.png"></image>
+    </view>
+
+  </view>
+  <view class="wxui-content">
+    <text class="wxui-title" wx:if="{{tool.length(talkDetail)>0}}">|宣讲详情|</text>
+    <template is="wxParse" data="{{wxParseData:talkDetails.nodes}}"></template>
+  </view>
+  <view class="wxui-content">
+    <text class="wxui-title" wx:if="{{tool.length(companyDetail)>0}}">|公司简介|</text>
+    <template is="wxParse" data="{{wxParseData:companyDetails.nodes}}"></template>
+  </view>
+</view>
+
+<view>
+  <!-- <view>{{talkInfo}}</view> -->
+  <!-- <view>{{talkDetail}}</view> -->
+  <!-- <view>{{companyDetail}}</view> -->
+
+</view>

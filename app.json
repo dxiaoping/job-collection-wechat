@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/menu/menu",
+    "pages/index/index",
+    "pages/myInfo/myInfo",
+    "pages/test/text/text",
+    "pages/jobdetail/jobdetail",
+    "pages/test/navigator/navigator",
+    "pages/shoucang/shoucang"
+    
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#00FFFF",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "求职招聘",
+    "backgroundColor": "black",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/menu/menu",
+        "text": "首页",
+        "iconPath": "image/index.png",
+        "selectedIconPath": "image/index.png"
+      },
+      {
+        "pagePath": "pages/myInfo/myInfo",
+        "text": "我的",
+        "iconPath": "image/me.png",
+        "selectedIconPath": "image/me_selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
