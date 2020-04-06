@@ -1,0 +1,2 @@
+<!--pages/test/map/map.wxml-->
+<map id="map" latitude="26.416" longitude="113.1358" scale="14" style="width: 100%; height: 300px;"></map>

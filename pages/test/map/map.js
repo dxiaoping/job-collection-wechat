@@ -1,4 +1,4 @@
-// pages/menu/menu.js
+// pages/test/map/map.js
 Page({
 
   /**
@@ -62,25 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  onItemClick:function(arg){
-    var url='';
-    console.log(arg);
-    switch (arg.currentTarget.id){
-      case "online":
-        url ='../index/index?recruitType=2';
-        break;
-      case "underline":
-        url ='../index/index?recruitType=1';
-        break;
-
-    }
-    wx.navigateTo({
-      url: url,
-      success: function(res) {},
-      fail: function(res) {},
-      complete: function(res) {},
-    })
   }
 })

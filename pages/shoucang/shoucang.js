@@ -42,7 +42,8 @@ Page({
       pageSize: this.data.pageSize,
       isTimeDesc: this.data.isTimeDesc,
       dayRange: this.data.dayRange,
-      openid: app.globalData.openid
+      openid: app.globalData.openid,
+      recruitType:0
     }
     wx.request({
       url: host + '/job/get_jobinfo',
@@ -142,7 +143,8 @@ Page({
       pageSize: this.data.pageSize,
       isTimeDesc: this.data.isTimeDesc,
       dayRange: this.data.dayRange,
-      openid: app.globalData.openid
+      openid: app.globalData.openid,
+      recruitType:0
     }
     wx.request({
       url: host + '/job/get_jobinfo',
@@ -176,7 +178,9 @@ Page({
       pageNo: this.data.pageNo,
       pageSize: this.data.pageSize,
       isTimeDesc: this.data.isTimeDesc,
-      dayRange: this.data.dayRange
+      dayRange: this.data.dayRange,
+      recruitType: 0
+
     }
     this.setData({
       loading: false

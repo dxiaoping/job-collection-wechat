@@ -6,8 +6,9 @@
     "pages/test/text/text",
     "pages/jobdetail/jobdetail",
     "pages/test/navigator/navigator",
-    "pages/shoucang/shoucang"
-    
+    "pages/shoucang/shoucang",
+    "pages/test/tbody/tbody",
+    "pages/test/map/map"
   ],
   "window": {
     "navigationBarBackgroundColor": "#00FFFF",

@@ -38,12 +38,13 @@ Page({
     if (this.data.screenFlag) {
       this.setData({
         screenFlag: !this.data.screenFlag,
-        brandFlag: false,
+        // brandFlag: false,
       })
-    } else {
+    }
+    else {
       this.setData({
         screenFlag: !this.data.screenFlag,
-        brandFlag: false,
+        // brandFlag: false,
       })
     }
   },
@@ -57,6 +58,7 @@ Page({
     })
   },
   handletouchtart: function (event) {//点击透明背景隐藏下拉
+    console.log("点击空白退出筛选");
     this.setData({
       screenFlag: false,
       brandFlag: false

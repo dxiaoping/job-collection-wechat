@@ -1,0 +1,11 @@
+<!--pages/test/tbody/tbody.wxml-->
+<text>pages/test/tbody/tbody.wxml</text>
+
+<import src="../../../wxParse/wxParse.wxml" />
+<wxs src="../../../wxs/tool.wxs" module="tool" />
+
+  <view class="wxui-content">
+    <text class="wxui-title">|宣讲信息|</text>
+    <template is="wxParse" data="{{wxParseData:tbodys.nodes}}"></template>
+    <!-- <view>{{tbody}}</view> -->
+  </view>

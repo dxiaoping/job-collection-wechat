@@ -15,8 +15,6 @@ Page({
     loadingFailed: false, //是否加载失败
     isTimeDesc: true, //是否按时间排序
     dayRange: 0, //未来多少天的数据
-    talkSchool: 0, //哪个学校
-    recruitType: 1, //线上或线下
     //  导航数据  时间顺序
     navigator: "时间顺序",
     navigatorDown: {
@@ -31,15 +29,7 @@ Page({
       index: 0
     },
     isDisplayRangeChoice: false, //控制综合下拉框是否显示
-    timeRangeColor: false,
-    // 学校筛选
-    school: "学校",
-    schoolDown: {
-      schoolDown: ["全部", "中南大学", "湖南大学"],
-      index: 0
-    },
-    isDisplaySchoolChoice: false, //控制综合下拉框是否显示
-    schoolColor: false
+    timeRangeColor: false
   },
 
   /**
@@ -47,16 +37,11 @@ Page({
    */
   onLoad: function(options) {
     console.log("Loading...");
-    console.log(options);
-    this.setData({
-      recruitType: options.recruitType
-    })
     let params = {
       pageNo: this.data.pageNo,
       pageSize: this.data.pageSize,
       isTimeDesc: this.data.isTimeDesc,
-      dayRange: this.data.dayRange,
-      recruitType: this.data.recruitType
+      dayRange: this.data.dayRange
     }
     wx.request({
       url: host + '/job/get_jobinfo',
@@ -77,32 +62,17 @@ Page({
   navigatorShow: function(e) { //导航下拉
     console.log("按下综合键");
     console.log(e);
-    // if (this.data.isDisplayOrderChoice || this.data.isDisplayRangeChoice){
     if (e.currentTarget.id == "timeOrder") {
       this.setData({
         isDisplayOrderChoice: !this.data.isDisplayOrderChoice,
-        isDisplayRangeChoice: false,
-        isDisplaySchoolChoice: false
+        isDisplayRangeChoice: false
       })
     } else if (e.currentTarget.id == "timeRange") {
       this.setData({
-        isDisplaySchoolChoice: false,
         isDisplayOrderChoice: false,
         isDisplayRangeChoice: !this.data.isDisplayRangeChoice
       })
-    } else if (e.currentTarget.id == "school") {
-      this.setData({
-        isDisplaySchoolChoice: !this.data.isDisplaySchoolChoice,
-        isDisplayOrderChoice: false,
-        isDisplayRangeChoice: false
-      })
     }
-    // }else{
-    //     this.setData({
-    //       isDisplayOrderChoice: false,
-    //       isDisplayRangeChoice: !this.data.isDisplayRangeChoice
-    //     })
-    // }
 
   },
   navigatorChoice: function(e) { //下拉选择子项
@@ -140,17 +110,17 @@ Page({
           break;
         case 1:
           this.setData({
-            dayRange: 2
+            dayRange : 2
           })
           break;
         case 2:
           this.setData({
-            dayRange: 3
+            dayRange : 3
           })
           break;
         case 3:
           this.setData({
-            dayRange: 5
+            dayRange : 5
           })
           break;
         case 4:
@@ -164,21 +134,13 @@ Page({
           })
           break;
       }
-    } else if (this.data.isDisplaySchoolChoice) {
-      this.setData({
-        school: e.currentTarget.dataset.item,
-        "schoolDown.index": e.currentTarget.dataset.index,
-        isDisplaySchoolChoice: false,
-        talkSchool: this.data.school.index
-      })
     }
 
     let params = {
       pageNo: this.data.pageNo,
       pageSize: this.data.pageSize,
       isTimeDesc: this.data.isTimeDesc,
-      dayRange: this.data.dayRange,
-      recruitType: this.data.recruitType
+      dayRange:this.data.dayRange
     }
     wx.request({
       url: host + '/job/get_jobinfo',
@@ -197,8 +159,7 @@ Page({
 
   },
   handletouchtart: function(event) { //点击透明背景隐藏下拉
-    console.log(event);
-    console.log("点击空白退出筛选");
+  console.log(event);
     this.setData({
       isDisplayOrderChoice: false
       // brandFlag: false
@@ -214,8 +175,7 @@ Page({
       pageNo: this.data.pageNo,
       pageSize: this.data.pageSize,
       isTimeDesc: this.data.isTimeDesc,
-      dayRange: this.data.dayRange,
-      recruitType: this.data.recruitType
+      dayRange: this.data.dayRange
     }
     this.setData({
       loading: false

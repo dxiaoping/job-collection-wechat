@@ -1,9 +1,9 @@
 <!-- <view wx:if="{{!searchResult}}"> -->
   <view class='screen'>
   <!-- 导航标题 -->
-    <view class='screen-name {{screenColor?"screen-color":""}}' bindtap='screenShow'>
+    <view class='screen-name}}' bindtap='screenShow'>
       <text>{{screen}}</text>
-      <text class='iconfont iconsanjiaoxing1 {{screenFlag?"iconfontAnimation":""}}'></text>
+      <!-- <text class='iconfont iconsanjiaoxing1 {{screenFlag?"iconfontAnimation":""}}'></text> -->
     </view>
     <!-- <view class='screen-name' style='color:{{salesColor}}' bindtap='salesNumber'>销量</view>
     <view class='screen-name {{brandColor?"screen-color":""}}' bindtap='brandShow'>
@@ -14,12 +14,12 @@
   <!-- 点击综合按钮后展示的下拉框 -->
   <!-- 下拉框透明背景 -->
   <view class='drop-down-background' hidden='{{!screenFlag}}' bindtouchstart='handletouchtart'></view>
-  <view class='drop-down-flex'>
+  <!-- <view class='drop-down-flex'>
     <view wx:for="{{screenDown.screenDown}}" wx:key="this" class='drop-down {{screenDown.screen==index?"down-active":""}} {{screenFlag?"down-show":""}}' data-item='{{item}}' data-index='{{index}}' bindtap='screenChoice'>
       <text>{{item}}</text>
       <text class='iconfont iconbianzu5' wx:if='{{screenDown.screen==index?true:false}}'></text>
     </view>
-  </view>
+  </view> -->
   <!-- 点击品牌按钮后展示的下拉框 -->
   <!-- 下拉框透明背景 -->
   <!-- <view class='drop-down-background' hidden='{{!brandFlag}}' bindtouchstart='handletouchtart'></view>

@@ -9,12 +9,9 @@
     <view class='navigator-name' bindtap='navigatorShow' id="timeRange">
       <text>{{timeRange}}</text>
     </view>
-    <view class='navigator-name' bindtap='navigatorShow' id="school">
-      <text>{{school}}</text>
-    </view>
   </view>
   <!-- 下拉列表 -->
-    <view class='drop-down-background' hidden='{{!isDisplayOrderChoice}}' bindtouchstart='handletouchtart'></view>
+  <!-- <view class='drop-down-background' hidden='{{!isDisplayOrderChoice}}' bindtouchstart='handletouchtart'></view> -->
   <view class='drop-down-flex'>
     <view wx:for="{{navigatorDown.navigatorDown}}" wx:key="this" class='drop-down {{navigatorDown.navigator==index?"down-active":""}} {{isDisplayOrderChoice?"down-show":""}}' data-item='{{item}}' data-index='{{index}}' bindtap='navigatorChoice'>
       <text>{{item}}</text>
@@ -25,12 +22,6 @@
     <view wx:for="{{timeRangeDown.timeRangeDown}}" wx:key="this" class='drop-down {{timeRange.navigator==index?"down-active":""}} {{isDisplayRangeChoice?"down-show":""}}' data-item='{{item}}' data-index='{{index}}' bindtap='navigatorChoice'>
       <text>{{item}}</text>
       <!-- <text class='iconfont iconbianzu5' wx:if='{{navigatorDown.navigator==index?true:false}}'></text> -->
-    </view>
-  </view>
-
-  <view class='drop-down-flex'>
-    <view wx:for="{{schoolDown.schoolDown}}" wx:key="this" class='drop-down {{school.navigator==index?"down-active":""}} {{isDisplaySchoolChoice?"down-show":""}}' data-item='{{item}}' data-index='{{index}}' bindtap='navigatorChoice'>
-      <text>{{item}}</text>
     </view>
   </view>
 </view>
@@ -46,7 +37,6 @@
             
             <view class="weui-company">{{item.company}}</view>
             <view wx:if="{{item.school == 1}}" class="weui-school">中南大学</view>
-            <view wx:if="{{item.school == 2}}" class="weui-school">湖南大学</view>
           </view>
           <view class="weui-row">
             <view class="weui-address">{{item.address}} </view>
